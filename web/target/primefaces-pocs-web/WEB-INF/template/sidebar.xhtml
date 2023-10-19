@@ -1,0 +1,324 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<aside class="app-sidebar bg-body-secondary shadow"
+		data-bs-theme="dark">
+		<!--begin::Sidebar Brand-->
+		<div class="sidebar-brand">
+			<!--begin::Brand Link-->
+			
+			<a href="#{request.getContextPath()}/paginas/index.xhtml"
+				class="brand-link">
+				<span class="fw-light">ÍCARO</span>					
+				<span class="brand-text fw-light"> - Sistema de Diárias - #{config.versao}</span>				
+			</a>
+			<!--end::Brand Link-->
+		</div>
+		<!--end::Sidebar Brand-->
+		<!--begin::Sidebar Wrapper-->
+		<div class="sidebar-wrapper" data-overlayscrollbars="host">
+			<div class="os-size-observer os-size-observer-appear">
+				<div class="os-size-observer-listener ltr"></div>
+			</div>
+			<div class="os-viewport os-viewport-scrollbar-hidden"
+				style="margin-right: -16px; margin-bottom: -16px; margin-left: 0px; top: -8px; right: auto; left: -8px; width: calc(100% + 16px); padding: 8px; overflow-y: scroll;">
+				<nav class="mt-2">
+					<!--begin::Sidebar Menu-->
+					<ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview"
+						role="menu" data-accordion="false">
+						
+						<!-- 
+						<i class="nav-icon bi bi-speedometer"></i>
+						 -->
+						
+						<li class="nav-item">
+							<a
+								href="#"
+								class="nav-link">
+																
+								<i class="nav-icon bi bi-clipboard-fill"></i>
+								<p>
+									Solicitação <i class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a
+									href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Diária</p></a></li>
+								<li class="nav-item"><a
+									href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Complementação</p></a></li>								
+							</ul>
+						</li>
+						
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon bi bi-pencil-square"></i>								
+								<p>
+									Cadastro <i class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item">
+									<a href="#{request.getContextPath()}/pagina/cadastro/colaborador.xhtml" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Colaborador / Magistrado</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Parametro</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+																		
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon bi bi-search"></i>
+								<p>
+									Consulta <i
+										class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Minhas Diárias</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Meus Cadastros</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Geral</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Pendentes</p>
+									</a>
+								</li>								
+							</ul>
+						</li>
+
+
+						
+						<li class="nav-item">
+							<a href="#" class="nav-link">							
+								<i class="nav-icon bi bi-box-seam-fill"></i>
+								<p>
+									Movimentação <i class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Alterar Situação da Diária</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Confirmar/Cancelar Diária</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Deferir/Indeferir Diária</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Registrar Emissão de Passagem</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Indicar Motorista/Transporte</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Informar Valor da Passagem</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Registrar Pagamento de Diária</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Comprovar Viagem</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Cancelar Diária</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Inserir Observação</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Juntar GRU</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Comprovar Recolhimento de GRU</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="nav-icon bi bi-circle"></i>
+										<p>Publicar Diária</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon pi pi-print"></i>
+								<p>
+									Relatório <i class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Divergências</p></a></li>
+							</ul>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Diárias Pagas Por Periodo</p></a></li>
+							</ul>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Diárias Pagas Por Periodo 2</p></a></li>
+							</ul>
+						</li>
+						
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon pi pi-cog"></i>
+								<p>
+									Manutenção <i class="nav-arrow bi bi-chevron-right"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Valor Diária</p></a></li>
+							</ul>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Info Municipios</p></a></li>
+							</ul>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#"
+									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+										<p>Dificil Acesso</p></a></li>
+							</ul>
+						</li>
+																																			
+						<li class="nav-header">DESENVOLVEDOR</li>
+						
+						<li class="nav-item"><a href="#" class="nav-link">
+							<i class="nav-icon bi bi-database"></i>
+								<p>
+									Tabelas <i class="nav-arrow bi bi-chevron-right"></i>
+								</p></a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Tipo de Transporte</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Tipo de Beneficiário</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Tipo de Rubrica</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Origem Colaborador</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Tipo de Movimentação</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Situação</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Parâmetro</p></a></li>
+								<li class="nav-item"><a
+									href="#" class="nav-link"><i
+										class="nav-icon bi bi-circle"></i>
+										<p>Unidade Confirmação</p></a></li>
+							</ul></li>
+														
+						
+						<li class="nav-header">AJUDA</li>
+						<li class="nav-item"><a href="#" class="nav-link"><i
+								class="nav-icon pi pi-video"></i>
+								<p>Video Tutoriais</p></a></li>
+												
+					</ul>
+					<!--end::Sidebar Menu-->
+				</nav>
+			</div>
+			<div
+				class="os-scrollbar os-scrollbar-horizontal os-theme-light os-scrollbar-handle-interactive os-scrollbar-track-interactive os-scrollbar-cornerless os-scrollbar-unusable os-scrollbar-auto-hidden">
+				<div class="os-scrollbar-track">
+					<div class="os-scrollbar-handle" style="width: 100%;"></div>
+				</div>
+			</div>
+			<div
+				class="os-scrollbar os-scrollbar-vertical os-theme-light os-scrollbar-handle-interactive os-scrollbar-track-interactive os-scrollbar-visible os-scrollbar-cornerless os-scrollbar-auto-hidden">
+				<div class="os-scrollbar-track">
+					<div class="os-scrollbar-handle"
+						style="height: 63.84%; transform: translateY(0%);"></div>
+				</div>
+			</div>
+		</div>
+		<!--end::Sidebar Wrapper-->
+	</aside>
+
+</ui:composition>
